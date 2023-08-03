@@ -16,7 +16,7 @@ if(isset($_POST['fname'])){
 
 $reference="HIS".rand(999,123).$_POST['telephone'];
 
-try {
+
     // Server settings
     $mail->SMTPDebug = 2;                      
     $mail->isSMTP();                                           
@@ -34,25 +34,8 @@ try {
    
     $mail->send();
     echo 'Message has been sent';
-} catch
 
-/*
-let fname=$("#fname").val();
-	let dob=$("#dob").val();
-	let idno=$("#idno").val();
-	let adrress=$("#inputAddress").val();
-	let county=$("#county").val();
-	let subcounty=$("#subcounty").val();
-	let telephone=$("#telephone").val();
-	let email=$("#email").val();
-	let gender=$("#gender").val();
-	let marital=$("#marital").val();
-	let kinname=$("#kinname").val();
-	let dobkin=$("#dobkin").val();
-	let kinid=$("#kinid").val();
-	let fgendr=$("#fgender").val();
-	let relp=$("#relationship").val();
-*/
+
 	$fname=trim(htmlentities(mysqli_real_escape_string($connection,$_POST['fname'])));
 	$dob=trim(htmlentities(mysqli_real_escape_string($connection,$_POST['dob'])));
 	$idno=trim(htmlentities(mysqli_real_escape_string($connection,$_POST['idno'])));
